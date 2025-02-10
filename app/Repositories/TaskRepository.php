@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Cache;
 
 class TaskRepository implements TaskRepositoryInterface {
 
-    public function all() {
+    public function all() {  
         if(Cache::tags('task')->has('tasks')) {
            return Cache::tags('task')->get('tasks');
         }else {
